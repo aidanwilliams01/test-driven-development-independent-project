@@ -10,4 +10,9 @@ describe('GalacticAge', () => {
     expect(galacticAge.marsYears).toEqual(0);
     expect(galacticAge.jupiterYears).toEqual(0);
   });
+
+  test('should correctly calculate Mercury age and return it', () => {
+    const galacticAge = new GalacticAge(10);
+    expect(galacticAge.calculateMercuryAge()).toEqual(2.3)
+  });
 })
