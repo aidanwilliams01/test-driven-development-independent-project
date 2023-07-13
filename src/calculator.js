@@ -8,6 +8,7 @@ export class GalacticAge {
   } 
 
   calculateMercuryAge() {
-    
+    this.mercuryYears = this.earthYears * .24;
+    return this.mercuryYears;
   }
 }
