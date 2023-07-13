@@ -17,4 +17,8 @@ export class GalacticAge {
     this.marsYears = this.earthYears * 1.88;
     return this.marsYears.toFixed(1);
   }
+
+  calculateJupiterAge() {
+
+  }
 }
