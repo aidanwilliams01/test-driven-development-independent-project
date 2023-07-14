@@ -27,4 +27,8 @@ describe('GalacticAge', () => {
   test('should correctly calculate Jupiter age and return it', () => {
     expect(galacticAge.calculateJupiterAge()).toEqual('0.8');
   });
+
+  test('should return an object', () => {
+    expect(galacticAge.yearsPassed()).toEqual({});
+  });
 })

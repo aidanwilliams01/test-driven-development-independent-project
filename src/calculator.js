@@ -22,4 +22,8 @@ export class GalacticAge {
     this.jupiterYears = this.earthYears / 11.86;
     return this.jupiterYears.toFixed(1);
   }
+
+  yearsPassed() {
+    
+  }
 }
