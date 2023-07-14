@@ -39,6 +39,12 @@ export class GalacticAge {
   }
 
   yearsYetToPass(futureBirthday) {
-    
+    const yearsYetToPass = {};
+    yearsYetToPass.Earth = futureBirthday - this.earthYears;
+    yearsYetToPass.Mercury = (yearsYetToPass.Earth / .24).toFixed(2);
+    yearsYetToPass.Venus = (yearsYetToPass.Earth / .62).toFixed(2);
+    yearsYetToPass.Mars = (yearsYetToPass.Earth / 1.88).toFixed(2);
+    yearsYetToPass.Jupiter = (yearsYetToPass.Earth / 11.86).toFixed(2);
+    return yearsYetToPass;
   }
 }

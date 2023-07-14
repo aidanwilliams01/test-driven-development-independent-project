@@ -51,7 +51,7 @@ describe('GalacticAge', () => {
     expect(galacticAge.yearsYetToPass(61).Earth).toEqual(5);
     expect(galacticAge.yearsYetToPass(61).Mercury).toEqual('20.83');
     expect(galacticAge.yearsYetToPass(61).Venus).toEqual('8.06');
-    expect(galacticAge.yearsYetToPass(61).Mars).toEqual('2.65');
-    expect(galacticAge.yearsYetToPass(43).Jupiter).toEqual('0.42');
+    expect(galacticAge.yearsYetToPass(61).Mars).toEqual('2.66');
+    expect(galacticAge.yearsYetToPass(61).Jupiter).toEqual('0.42');
   });
 })
