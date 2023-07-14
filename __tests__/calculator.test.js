@@ -29,7 +29,7 @@ describe('GalacticAge', () => {
   });
 
   test('should return an object', () => {
-    expect(galacticAge.yearsPassed()).toEqual({});
+    expect(typeof galacticAge.yearsPassed()).toEqual('object');
   });
 
   test('should return an object containing years passed since a previous birthday for all planets', () => {
@@ -39,5 +39,10 @@ describe('GalacticAge', () => {
     expect(galacticAge.yearsPassed(43).Venus).toEqual('20.97');
     expect(galacticAge.yearsPassed(43).Mars).toEqual('6.91');
     expect(galacticAge.yearsPassed(43).Jupiter).toEqual('1.10');
+  });
+
+  test('returns an error message if argument is greater than Earth age', () => {
+    galacticAge = new GalacticAge(56);
+    expect(galacticAge.yearsPassed(60)).toEqual('Error: argument is greater than current age');
   });
 })
