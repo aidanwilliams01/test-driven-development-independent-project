@@ -33,10 +33,11 @@ describe('GalacticAge', () => {
   });
 
   test('should return an object containing years passed since a previous birthday for all planets', () => {
-    expect(galacticAge.yearsPassed().Earth).toEqual(13);
-    expect(galacticAge.yearsPassed().Mercury).toEqual(54.16);
-    expect(galacticAge.yearsPassed().Venus).toEqual(20.96);
-    expect(galacticAge.yearsPassed().Mars).toEqual(6.91);
-    expect(galacticAge.yearsPassed().Jupiter).toEqual(1.09);
+    galacticAge = new GalacticAge(56);
+    expect(galacticAge.yearsPassed(43).Earth).toEqual(13);
+    expect(galacticAge.yearsPassed(43).Mercury).toEqual('54.17');
+    expect(galacticAge.yearsPassed(43).Venus).toEqual('20.97');
+    expect(galacticAge.yearsPassed(43).Mars).toEqual('6.91');
+    expect(galacticAge.yearsPassed(43).Jupiter).toEqual('1.10');
   });
 })

@@ -23,8 +23,13 @@ export class GalacticAge {
     return this.jupiterYears.toFixed(1);
   }
 
-  yearsPassed() {
+  yearsPassed(priorBirthday) {
     const yearsPassed = {};
+    yearsPassed.Earth = this.earthYears - priorBirthday;
+    yearsPassed.Mercury = (yearsPassed.Earth / .24).toFixed(2);
+    yearsPassed.Venus = (yearsPassed.Earth / .62).toFixed(2);
+    yearsPassed.Mars = (yearsPassed.Earth / 1.88).toFixed(2);
+    yearsPassed.Jupiter = (yearsPassed.Earth / 11.86).toFixed(2);
     return yearsPassed;
   }
 }
