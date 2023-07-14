@@ -54,4 +54,9 @@ describe('GalacticAge', () => {
     expect(galacticAge.yearsYetToPass(61).Mars).toEqual('2.66');
     expect(galacticAge.yearsYetToPass(61).Jupiter).toEqual('0.42');
   });
+
+  test('returns an error message if argument is less than Earth age', () => {
+    galacticAge = new GalacticAge(56);
+    expect(galacticAge.yearsYetToPass(50)).toEqual('Error: argument is less than current age');
+  });
 })
