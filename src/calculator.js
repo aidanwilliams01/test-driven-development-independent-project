@@ -37,4 +37,8 @@ export class GalacticAge {
       return yearsPassed;
     }
   }
+
+  yearsYetToPass(futureBirthday) {
+    
+  }
 }
