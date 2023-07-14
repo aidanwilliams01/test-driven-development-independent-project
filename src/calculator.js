@@ -24,6 +24,7 @@ export class GalacticAge {
   }
 
   yearsPassed() {
-    
+    const yearsPassed = {};
+    return yearsPassed;
   }
 }
