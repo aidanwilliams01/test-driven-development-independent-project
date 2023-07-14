@@ -31,4 +31,12 @@ describe('GalacticAge', () => {
   test('should return an object', () => {
     expect(galacticAge.yearsPassed()).toEqual({});
   });
+
+  test('should return an object containing years passed since a previous birthday for all planets', () => {
+    expect(galacticAge.yearsPassed().Earth).toEqual(13);
+    expect(galacticAge.yearsPassed().Mercury).toEqual(54.16);
+    expect(galacticAge.yearsPassed().Venus).toEqual(20.96);
+    expect(galacticAge.yearsPassed().Mars).toEqual(6.91);
+    expect(galacticAge.yearsPassed().Jupiter).toEqual(1.09);
+  });
 })
