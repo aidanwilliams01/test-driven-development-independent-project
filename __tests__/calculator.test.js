@@ -25,11 +25,11 @@ describe('GalacticAge', () => {
 
   test('should return an object containing years passed since a previous birthday for all planets', () => {
     galacticAge = new GalacticAge(56);
-    expect(galacticAge.yearsPassed(43).Earth).toEqual(13);
-    expect(galacticAge.yearsPassed(43).Mercury).toEqual('54.17');
-    expect(galacticAge.yearsPassed(43).Venus).toEqual('20.97');
-    expect(galacticAge.yearsPassed(43).Mars).toEqual('6.91');
-    expect(galacticAge.yearsPassed(43).Jupiter).toEqual('1.10');
+    expect(galacticAge.yearsPassed(43).earth).toEqual(13);
+    expect(galacticAge.yearsPassed(43).mercury).toEqual('54.17');
+    expect(galacticAge.yearsPassed(43).venus).toEqual('20.97');
+    expect(galacticAge.yearsPassed(43).mars).toEqual('6.91');
+    expect(galacticAge.yearsPassed(43).jupiter).toEqual('1.10');
   });
 
   test('returns an error message if argument is greater than Earth age', () => {
@@ -39,11 +39,11 @@ describe('GalacticAge', () => {
 
   test('should return an object containing years until a future birthday for all planets', () => {
     galacticAge = new GalacticAge(56);
-    expect(galacticAge.yearsYetToPass(61).Earth).toEqual(5);
-    expect(galacticAge.yearsYetToPass(61).Mercury).toEqual('20.83');
-    expect(galacticAge.yearsYetToPass(61).Venus).toEqual('8.06');
-    expect(galacticAge.yearsYetToPass(61).Mars).toEqual('2.66');
-    expect(galacticAge.yearsYetToPass(61).Jupiter).toEqual('0.42');
+    expect(galacticAge.yearsYetToPass(61).earth).toEqual(5);
+    expect(galacticAge.yearsYetToPass(61).mercury).toEqual('20.83');
+    expect(galacticAge.yearsYetToPass(61).venus).toEqual('8.06');
+    expect(galacticAge.yearsYetToPass(61).mars).toEqual('2.66');
+    expect(galacticAge.yearsYetToPass(61).jupiter).toEqual('0.42');
   });
 
   test('returns an error message if argument is less than Earth age', () => {
