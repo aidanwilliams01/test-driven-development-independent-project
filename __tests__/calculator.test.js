@@ -12,20 +12,11 @@ describe('GalacticAge', () => {
     expect(galacticAge.earthYears).toEqual(10);
   });
 
-  test('should correctly calculate Mercury age and return it', () => {
-    expect(galacticAge.calculateMercuryAge()).toEqual('41.7');
-  });
-
-  test('should correctly calculate Venus age and return it', () => {
-    expect(galacticAge.calculateVenusAge()).toEqual('16.1');
-  });
-
-  test('should correctly calculate Mars age and return it', () => {
-    expect(galacticAge.calculateMarsAge()).toEqual('5.3');
-  });
-
-  test('should correctly calculate Jupiter age and return it', () => {
-    expect(galacticAge.calculateJupiterAge()).toEqual('0.8');
+  test('should correctly calculate galactic ages and return them', () => {
+    expect(galacticAge.calculateGalacticAges().Mercury).toEqual('41.7');
+    expect(galacticAge.calculateGalacticAges().Venus).toEqual('16.1');
+    expect(galacticAge.calculateGalacticAges().Mars).toEqual('5.3');
+    expect(galacticAge.calculateGalacticAges().Jupiter).toEqual('0.8');
   });
 
   test('should return an object', () => {
