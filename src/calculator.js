@@ -25,31 +25,33 @@ export class GalacticAge {
 
   yearsPassed(priorBirthday) {
     if (priorBirthday > this.earthYears) {
-      return 'Error: argument is greater than current age';
+      this.galacticYearsPassed = 'Error: argument is greater than current age';
+      return this.galacticYearsPassed;
     }
     else {
-      const yearsPassed = {};
-      yearsPassed.Earth = this.earthYears - priorBirthday;
-      yearsPassed.Mercury = (yearsPassed.Earth / .24).toFixed(2);
-      yearsPassed.Venus = (yearsPassed.Earth / .62).toFixed(2);
-      yearsPassed.Mars = (yearsPassed.Earth / 1.88).toFixed(2);
-      yearsPassed.Jupiter = (yearsPassed.Earth / 11.86).toFixed(2);
-      return yearsPassed;
+      this.galacticYearsPassed = {};
+      this.galacticYearsPassed.Earth = this.earthYears - priorBirthday;
+      this.galacticYearsPassed.Mercury = (this.galacticYearsPassed.Earth / .24).toFixed(2);
+      this.galacticYearsPassed.Venus = (this.galacticYearsPassed.Earth / .62).toFixed(2);
+      this.galacticYearsPassed.Mars = (this.galacticYearsPassed.Earth / 1.88).toFixed(2);
+      this.galacticYearsPassed.Jupiter = (this.galacticYearsPassed.Earth / 11.86).toFixed(2);
+      return this.galacticYearsPassed;
     }
   }
 
   yearsYetToPass(futureBirthday) {
     if (futureBirthday < this.earthYears) {
-      return 'Error: argument is less than current age';
+      this.galacticYearsYetToPass = 'Error: argument is less than current age';
+      return this.galacticYearsYetToPass;
     }
     else {
-      const yearsYetToPass = {};
-      yearsYetToPass.Earth = futureBirthday - this.earthYears;
-      yearsYetToPass.Mercury = (yearsYetToPass.Earth / .24).toFixed(2);
-      yearsYetToPass.Venus = (yearsYetToPass.Earth / .62).toFixed(2);
-      yearsYetToPass.Mars = (yearsYetToPass.Earth / 1.88).toFixed(2);
-      yearsYetToPass.Jupiter = (yearsYetToPass.Earth / 11.86).toFixed(2);
-      return yearsYetToPass;
+      this.galacticYearsYetToPass = {};
+      this.galacticYearsYetToPass.Earth = futureBirthday - this.earthYears;
+      this.galacticYearsYetToPass.Mercury = (this.galacticYearsYetToPass.Earth / .24).toFixed(2);
+      this.galacticYearsYetToPass.Venus = (this.galacticYearsYetToPass.Earth / .62).toFixed(2);
+      this.galacticYearsYetToPass.Mars = (this.galacticYearsYetToPass.Earth / 1.88).toFixed(2);
+      this.galacticYearsYetToPass.Jupiter = (this.galacticYearsYetToPass.Earth / 11.86).toFixed(2);
+      return this.galacticYearsYetToPass;
     }
   }
 }
