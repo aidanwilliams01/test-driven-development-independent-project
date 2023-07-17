@@ -4,7 +4,12 @@ export class GalacticAge {
   } 
 
   calculateGalacticAges() {
-    
+    this.galacticAges = {};
+    this.galacticAges.mercuryYears = (this.earthYears / .24).toFixed(1);
+    this.galacticAges.venusYears = (this.earthYears / .62).toFixed(1);
+    this.galacticAges.marsYears = (this.earthYears / 1.88).toFixed(1);
+    this.galacticAges.jupiterYears = (this.earthYears / 11.86).toFixed(1);
+    return this.galacticAges;
   }
 
   yearsPassed(priorBirthday) {
