@@ -27,7 +27,6 @@ A project containing Javascript methods to:
   * _`$ npm install` to install packages_
 
 * Other commands:
-  * _To build the project and start a development server, run `$ npm run start`._
   * _To lint Javascript files, run `$ npm run lint`._
   * _To view code testing with Jest, run `$ npm run test`._
 
